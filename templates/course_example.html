@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../static/css/main.css">
+    <title>Document</title>
+    
+</head>
+<body>
+    <header>
+        <img src="../images/logos/ALKA.png" alt="logo" id="logo">
+        <nav>
+            <ul class="nav_links">
+                <li><a href="">Catalogue</a></li>
+                <li><a href="">Tarifs</a></li>
+                <li><a href="">Contact</a></li>
+            </ul>
+        </nav>
+        <a class="cta" href="#"><button>Login</button></a>
+    </header>
+    <div class="core">
+        <div class="core-top"></div>
+        <div class="core-middle">
+            <div class="bloc" id="bloc_id">
+                <!-- <button><a href="{{ test }}"></a></button> -->
+                <div class="concept" id='concept_id'>
+                    <div class="concept-left"></div>
+                    <div class="concept-core">
+                        <h3>Concept</h3>
+                        <div class="concept-core-content">
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed non risus. Suspendisse lectus tortor, dignissim sit amet, adipiscing nec, ultricies sed, dolor. Cras elementum ultrices diam. Maecenas ligula massa, varius a, semper congue, euismod non, mi. </p>
+                        </div>
+                        <div class="next-button">
+                            <a class="new_button" id="button_1" href="#"><button onClick="new_button();">Next</button></a>
+                        </div>
+                    </div>
+                    <div class="concept-right">
+                    </div>
+                </div>
+                
+                <!-- <div class="example">
+                    <div class="example-left"></div>
+                    <div class="example-core">
+                        <h3>Example</h3>
+                        <div class="example-core-content">
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed non risus. Suspendisse lectus tortor, dignissim sit amet, adipiscing nec, ultricies sed, dolor. Cras elementum ultrices diam. Maecenas ligula massa, varius a, semper congue, euismod non, mi. </p>
+                        </div>
+                        <div class="next-button">
+                            <a href="#"><button onclick="window.location.href='{{ url_for( 'new') }}';">Next</button></a>
+                        </div>
+                    </div>
+                    <div class="example-right">
+                        
+                    </div>
+                </div> -->
+                
+                <!-- <div class="test">
+                    <div class="test-left"></div>
+                    <div class="test-core">
+                        <h3>Test</h3>
+                        <div class="test-core-content">
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed non risus. Suspendisse lectus tortor, dignissim sit amet, adipiscing nec, ultricies sed, dolor. Cras elementum ultrices diam. Maecenas ligula massa, varius a, semper congue, euismod non, mi. </p>
+                        </div>
+                        <div class="next-button">
+                            <a href="" class="cta" href="#"><button>Next</button></a>
+                        </div>
+                    </div>
+                    <div class="test-right">
+                        
+                    </div>
+                </div> -->
+            </div>
+        </div>
+        <div class="core-down"></div>
+    </div>
+
+    <script>
+        // var tag = document.createElement("p");
+        // var text = document.createTextNode("Tutorix is the best e-learning platform");
+        // tag.appendChild(text);
+        // var element = document.getElementById("button_1");
+        // element.appendChild(tag);
+        
+        // document.getElementsByClassName("new_button")[i].addEventListener("click", 
+        function new_button(){
+            // var tag = document.createElement("p");
+            // var text = document.createTextNode("Tutorix is the best e-learning platform");
+            // tag.appendChild(text);
+            let tag_to_clone = document.getElementsByClassName("concept")[0]
+            // console.log(tag_to_clone)
+            let tag = tag_to_clone.cloneNode(true)
+            // clone.setAttribute('id','concept_id1')
+            var element = document.getElementById("bloc_id");
+            element.appendChild(tag);
+            document.getElementById("button_1").onclick = null;
+        };
+
+
+        
+        
+    </script>
+
+</body>
+</html>
